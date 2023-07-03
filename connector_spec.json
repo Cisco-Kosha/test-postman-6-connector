@@ -35,7 +35,7 @@
       "description": "Test-Postman-6 API Password",
       "default": "",
       "example": "304720394u3",
-      "helpSection": "find in the settings section",
+      "helpSection": "find in the settings section"
     }
   ]
 }
