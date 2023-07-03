@@ -47,7 +47,7 @@ jobs:
 #           value: "{'value': 'NONE', 'short_description':'Test failed', 'long_description': '${{ steps.validate_files.outputs }}'}"
         env:     
 #           STEP_OUTPUT: ${{ toJson(steps.validate_files.outputs.*) }}
-          PAYLOAD: "{\"value\":\"INVALID\", \"short_description\":\"Lint failed on invalid JSON files\", \"link\":${{ env.WORKFLOW_LINK }}}"
+          PAYLOAD: "{\"value\":\"INVALID\", \"short_description\":\"Lint failed on invalid JSON files\", \"link\":\"${{ env.WORKFLOW_LINK }}\"}"
           GITHUB_TOKEN: ${{ steps.generate_token.outputs.token }}
   Test:
     runs-on: ubuntu-latest
