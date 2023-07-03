@@ -47,7 +47,7 @@ jobs:
 #           value: "{'value': 'NONE', 'short_description':'Test failed', 'long_description': '${{ steps.validate_files.outputs }}'}"
         env:     
 #           STEP_OUTPUT: ${{ toJson(steps.validate_files.outputs.*) }}
-          PAYLOAD: "{\"value\":\"INVALID\", \"short_description\":\"Lint failed on invalid JSON files\", \"link\":\"${{ env.WORKFLOW_LINK }}\"}"
+          PAYLOAD: "{\"value\":\"INVALID\", \"short_description\":\"Lint failed on invalid JSON files\", \"long_description\":\"\", \"link\":\"${{ env.WORKFLOW_LINK }}\"}"
           GITHUB_TOKEN: ${{ steps.generate_token.outputs.token }}
   Test:
     runs-on: ubuntu-latest
@@ -78,7 +78,7 @@ jobs:
           value: ${{ toJson(env.PAYLOAD) }}
         env:
           GITHUB_TOKEN: ${{ steps.generate_token.outputs.token }}
-          PAYLOAD: "{\"value\":\"ERROR\", \"short_description\":\"Tests failed on invalid API spec\", \"link\":${{ env.WORKFLOW_LINK }}}"
+          PAYLOAD: "{\"value\":\"ERROR\", \"short_description\":\"Tests failed on invalid API spec\", \"long_description\":\"\", \"link\":${{ env.WORKFLOW_LINK }}}"
 #       - name: Set status payload
 #         if: ${{ failure() }}
 #         uses: octokit/request-action@v2.1.0
@@ -112,7 +112,7 @@ jobs:
           value: ${{ toJson(env.PAYLOAD) }}
         env:
           GITHUB_TOKEN: ${{ steps.generate_token.outputs.token }}
-          PAYLOAD: "{\"value\":\"READY\", \"short_description\":\"Ready for deployment\", \"link\":${{ env.WORKFLOW_LINK }}}"
+          PAYLOAD: "{\"value\":\"READY\", \"short_description\":\"Ready for deployment\", \"long_description\":\"\", \"link\":${{ env.WORKFLOW_LINK }}}"
 #       - name: Set status to READY 
 #         uses: octokit/request-action@v2.1.0
 #         id: change_status_value
