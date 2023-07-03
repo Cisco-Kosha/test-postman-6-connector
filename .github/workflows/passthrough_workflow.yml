@@ -112,7 +112,7 @@ jobs:
           value: ${{ toJson(env.PAYLOAD) }}
         env:
           GITHUB_TOKEN: ${{ steps.generate_token.outputs.token }}
-          PAYLOAD: "{\"value\":\"READY\", \"short_description\":\"Ready for deployment\", \"long_description\":\"\", \"link\":${{ env.WORKFLOW_LINK }}}"
+          PAYLOAD: "{\"value\":\"READY\", \"short_description\":\"Ready for deployment\", \"long_description\":\"\", \"link\":\"${{ env.WORKFLOW_LINK }}\"}"
 #       - name: Set status to READY 
 #         uses: octokit/request-action@v2.1.0
 #         id: change_status_value
