@@ -20,9 +20,6 @@ jobs:
       - name: Validate JSON and YAML files
         id: validate_files
         uses: GrantBirki/json-yaml-validate@v1.4.0
-        with:
-          name: File Validation
-          output: .github/output/lint.txt
       - name: Set status payload
         if: ${{ failure() }}
         uses: octokit/request-action@v2.1.0
