@@ -33,7 +33,7 @@ jobs:
           name: STATUS_PAYLOAD
           value: ${{ toJson(env.PAYLOAD) }}
         env:
-          ERROR_OUTPUT: ${{ steps.validate_files }}
+          ERROR_OUTPUT: ${{ steps.validate_files.outcome }}
           PAYLOAD: "{\"value\":\"INVALID\", \"short_description\":\"Lint failed on invalid JSON files\", \"long_description\":\"${{ env.ERROR_OUTPUT }}\", \"link\":\"${{ env.WORKFLOW_LINK }}\"}"
           GITHUB_TOKEN: ${{ steps.generate_token.outputs.token }}
   Test:
