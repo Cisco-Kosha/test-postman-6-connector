@@ -11,7 +11,7 @@
       "description": "Test-Postman-6 API Server Url",
       "default": "https://test.com",
       "example": "https://test.com",
-      "helpSection": "use the default"
+      "helpSection": "use the default",
     },
     {
       "field": "USERNAME",
