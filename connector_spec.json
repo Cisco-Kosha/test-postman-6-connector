@@ -2,6 +2,18 @@
   "version": "2.0.0",
   "fields": [
     {
+      "field": "AUTH_TYPE",
+      "displayName": "Test-Postman-6 Auth Type",
+      "type": "String",
+      "minLength": 4,
+      "maxLength": 60,
+      "required": true,
+      "description": "Test-Postman-6 API Auth Type",
+      "default": "BASIC_AUTH",
+      "example": "BASIC_AUTH",
+      "helpSection": ""
+    },
+    {
       "field": "SERVER_URL",
       "displayName": "Test-Postman-6 Server Url",
       "type": "String",
@@ -11,7 +23,7 @@
       "description": "Test-Postman-6 API Server Url",
       "default": "https://test.com",
       "example": "https://test.com",
-      "helpSection": "use the default",
+      "helpSection": "use the default"
     },
     {
       "field": "USERNAME",
